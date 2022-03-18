@@ -1,0 +1,32 @@
+###
+POST http://localhost:3000/dashboard/compra HTTP/1.1
+Content-Type: application/json
+
+{
+    "fecha":"07-11-2022",
+    "DocNum":"3348902",
+    "client":{"name":"luisa", "direction":["manizales"]},
+    "product":{"details":{"nameP":"celular","amount":4}}
+}
+### listar todos
+GET http://localhost:3000/dashboard/compras HTTP/1.1
+Content-Type: application/json
+
+### Consultar un recurso específico existente en la BD
+GET http://localhost:3000/dashboard/compras/62333526568cdc506df84f28 HTTP/1.1
+Content-Type: application/json
+
+### Eliminar un recurso específico existente en la BD
+DELETE http://localhost:3000/dashboard/compras/6233340b568cdc506df84f2 HTTP/1.1
+Content-Type: application/json
+
+###
+PUT http://localhost:3000/dashboard/compras/62333526568cdc506df84f28 HTTP/1.1
+Content-Type: application/json
+
+{
+    "fecha":"01-05-2021",
+    "DocNum":"123456",
+    "client":{"name":"camila"},
+    "product":{"details":{"amount":5}}
+}
